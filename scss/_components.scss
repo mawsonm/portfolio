@@ -1,0 +1,11 @@
+// Reusable Components
+
+.btn-accent {
+  background: $accent-color;
+  border-radius: 10px; //30px
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: $accent-font;
+  cursor: pointer;
+  border: none;
+}

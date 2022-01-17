@@ -1,0 +1,50 @@
+// Container and Grid stuff
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+#nav {
+  @include flex-between;
+  margin-top: 1rem;
+}
+
+#home {
+  .home {
+    &-container {
+      @include flex-between;
+
+      .profile {
+        @include flex-column;
+        width: 50%;
+
+        .primary {
+          color: $primary-color;
+          font-size: 4rem;
+          font-family: $accent-font;
+          font-weight: 500;
+        }
+
+        .secondary {
+          color: $secondary-color;
+          font-size: 2rem;
+          font-weight: 400;
+        }
+
+        .small {
+          color: $secondary-color;
+        }
+      }
+
+      .pic {
+        width: 50%;
+        .profile_pic {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
