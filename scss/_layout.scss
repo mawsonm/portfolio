@@ -5,6 +5,9 @@
   margin: auto;
   overflow: hidden;
 }
+#header {
+  background: $bg-dark;
+}
 
 #nav {
   @include flex-between;
@@ -12,9 +15,23 @@
 }
 
 #home {
+  background: $bg-dark;
+  .custom-shape-divider-bottom {
+    @include shape-divider;
+  }
+
+  .custom-shape-divider-bottom svg {
+    @include shape-divider-svg;
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    fill: $bg-light;
+  }
+
   .home {
     &-container {
       @include flex-between;
+      @extend %container-shared;
 
       .profile {
         @include flex-column;
@@ -46,5 +63,43 @@
         }
       }
     }
+  }
+}
+
+#about {
+  background: $bg-light;
+  h2,
+  h4,
+  p {
+    color: #333;
+  }
+  .custom-shape-divider-bottom {
+    @include shape-divider;
+  }
+
+  .custom-shape-divider-bottom svg {
+    @include shape-divider-svg;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    fill: $bg-medium;
+  }
+
+  .about {
+    &-header {
+      @include flex-column;
+    }
+    &-container {
+      @include flex-between;
+      @extend %container-shared;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom svg {
+    width: calc(100% + 1.3px);
+    height: 27px;
   }
 }

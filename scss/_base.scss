@@ -28,6 +28,34 @@ $secondary-color: #e6efff;
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+@mixin shape-divider-svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 117px;
+}
+
+.header-text {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.sub-header-text {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 // Reset
 * {
   margin: 0;
@@ -38,7 +66,6 @@ $secondary-color: #e6efff;
 body {
   font-family: $primary-font;
   line-height: 1.6;
-  background: $bg-dark;
 }
 h1 {
   padding: 0;
@@ -106,4 +133,8 @@ a {
   &-4 {
     margin: 4rem 0rem;
   }
+}
+
+%container-shared {
+  margin-bottom: 6rem;
 }

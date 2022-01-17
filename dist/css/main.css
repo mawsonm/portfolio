@@ -5,8 +5,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  line-height: 1.6;
-  background: #0f1525; }
+  line-height: 1.6; }
 
 h1 {
   padding: 0; }
@@ -58,6 +57,9 @@ a {
 .my-4 {
   margin: 4rem 0rem; }
 
+#home .home-container, #about .about-container {
+  margin-bottom: 6rem; }
+
 .btn-accent {
   background: #d5a419;
   border-radius: 10px;
@@ -73,35 +75,98 @@ a {
   margin: auto;
   overflow: hidden; }
 
+#header {
+  background: #0f1525; }
+
 #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem; }
 
-#home .home-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  #home .home-container .profile {
+#home {
+  background: #0f1525; }
+  #home .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); }
+  #home .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px; }
+  #home .custom-shape-divider-bottom .shape-fill {
+    fill: #e6efff; }
+  #home .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #home .home-container .profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%; }
+      #home .home-container .profile .primary {
+        color: #fff;
+        font-size: 4rem;
+        font-family: "Balsamiq Sans", cursive;
+        font-weight: 500; }
+      #home .home-container .profile .secondary {
+        color: #e6efff;
+        font-size: 2rem;
+        font-weight: 400; }
+      #home .home-container .profile .small {
+        color: #e6efff; }
+    #home .home-container .pic {
+      width: 50%; }
+      #home .home-container .pic .profile_pic {
+        width: 150px;
+        height: 150px; }
+
+#about {
+  background: #e6efff; }
+  #about .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); }
+  #about .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px;
+    transform: rotateY(180deg); }
+  #about .custom-shape-divider-bottom .shape-fill {
+    fill: #3a3f52; }
+  #about .about-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 50%; }
-    #home .home-container .profile .primary {
-      color: #fff;
-      font-size: 4rem;
-      font-family: "Balsamiq Sans", cursive;
-      font-weight: 500; }
-    #home .home-container .profile .secondary {
-      color: #e6efff;
-      font-size: 2rem;
+    align-items: center; }
+    #about .about-header h2,
+    #about .about-header h4,
+    #about .about-header p {
+      color: #333; }
+    #about .about-header .header-text {
+      font-size: 3rem;
       font-weight: 400; }
-    #home .home-container .profile .small {
-      color: #e6efff; }
-  #home .home-container .pic {
-    width: 50%; }
-    #home .home-container .pic .profile_pic {
-      width: 150px;
-      height: 150px; }
+    #about .about-header .sub-header-text {
+      font-size: 2rem;
+      font-weight: 300; }
+  #about .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom svg {
+    width: calc(100% + 1.3px);
+    height: 27px; } }
