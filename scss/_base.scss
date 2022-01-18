@@ -48,11 +48,11 @@ $secondary-color: #e6efff;
 
 .header-text {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .sub-header-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -101,6 +101,7 @@ a {
 }
 
 // Utilities
+
 .text-center {
   text-align: center;
 }
@@ -117,6 +118,21 @@ a {
   }
   &-4 {
     padding: 4rem 0rem;
+  }
+}
+
+.pxy {
+  &-1 {
+    padding: 1rem 1rem;
+  }
+  &-2 {
+    padding: 2rem 2rem;
+  }
+  &-3 {
+    padding: 3rem 3rem;
+  }
+  &-4 {
+    padding: 4rem 4rem;
   }
 }
 

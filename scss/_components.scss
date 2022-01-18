@@ -9,3 +9,22 @@
   cursor: pointer;
   border: none;
 }
+
+.bottom-line {
+  display: block;
+  height: 3px;
+  width: 12rem;
+  background: black;
+  position: relative;
+
+  .oval {
+    position: absolute;
+    display: block;
+    height: 12px;
+    background: $accent-color;
+    top: -6px;
+    left: 40%;
+    right: 40%;
+    border-radius: 5px;
+  }
+}

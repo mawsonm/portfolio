@@ -1,3 +1,11 @@
+.header-text {
+  font-size: 3rem;
+  font-weight: 500; }
+
+.sub-header-text {
+  font-size: 1.5rem;
+  font-weight: 300; }
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +53,18 @@ a {
 .py-4 {
   padding: 4rem 0rem; }
 
+.pxy-1 {
+  padding: 1rem 1rem; }
+
+.pxy-2 {
+  padding: 2rem 2rem; }
+
+.pxy-3 {
+  padding: 3rem 3rem; }
+
+.pxy-4 {
+  padding: 4rem 4rem; }
+
 .my-1 {
   margin: 1rem 0rem; }
 
@@ -68,6 +88,22 @@ a {
   font-family: "Balsamiq Sans", cursive;
   cursor: pointer;
   border: none; }
+
+.bottom-line {
+  display: block;
+  height: 3px;
+  width: 12rem;
+  background: black;
+  position: relative; }
+  .bottom-line .oval {
+    position: absolute;
+    display: block;
+    height: 12px;
+    background: #d5a419;
+    top: -6px;
+    left: 40%;
+    right: 40%;
+    border-radius: 5px; }
 
 .container {
   max-width: 1280px;
@@ -130,6 +166,10 @@ a {
 
 #about {
   background: #e6efff; }
+  #about h2,
+  #about h4,
+  #about p {
+    color: #333; }
   #about .custom-shape-divider-bottom {
     position: absolute;
     bottom: 0;
@@ -151,20 +191,30 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; }
-    #about .about-header h2,
-    #about .about-header h4,
-    #about .about-header p {
-      color: #333; }
-    #about .about-header .header-text {
-      font-size: 3rem;
-      font-weight: 400; }
-    #about .about-header .sub-header-text {
-      font-size: 2rem;
-      font-weight: 300; }
   #about .about-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.19);
+    background: #e6efff; }
+    #about .about-container .description-highlights {
+      text-align: left;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr); }
+      #about .about-container .description-highlights .description {
+        grid-template-rows: 1 / 2; }
+      #about .about-container .description-highlights .highlights {
+        grid-template-rows: 2 / 3; }
+      #about .about-container .description-highlights ul {
+        flex-direction: column;
+        list-style: disc; }
+      #about .about-container .description-highlights p,
+      #about .about-container .description-highlights li {
+        font-size: 1.2rem; }
+      #about .about-container .description-highlights li {
+        margin-left: 20px; }
+      #about .about-container .description-highlights ::marker {
+        color: #d5a419;
+        font-size: 1.8rem; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {

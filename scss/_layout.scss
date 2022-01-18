@@ -91,8 +91,44 @@
       @include flex-column;
     }
     &-container {
-      @include flex-between;
+      display: flex;
+      justify-content: space-between;
       @extend %container-shared;
+      box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.19);
+      background: $bg-light;
+
+      .description-highlights {
+        text-align: left;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+        .description {
+          grid-template-rows: 1 / 2;
+        }
+
+        .highlights {
+          grid-template-rows: 2 / 3;
+        }
+
+        ul {
+          flex-direction: column;
+          list-style: disc;
+        }
+
+        p,
+        li {
+          font-size: 1.2rem;
+        }
+
+        li {
+          margin-left: 20px;
+        }
+
+        ::marker {
+          color: $accent-color;
+          font-size: 1.8rem;
+        }
+      }
     }
   }
 }
