@@ -105,6 +105,19 @@ a {
     right: 40%;
     border-radius: 5px; }
 
+.skill-card {
+  background: #0f1525;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 25px;
+  height: 250px;
+  width: 250px; }
+  .skill-card p {
+    font-size: 1.3rem; }
+
 .container {
   max-width: 1280px;
   padding: 0 1.5rem;
@@ -165,11 +178,10 @@ a {
         height: 150px; }
 
 #about {
-  background: #e6efff; }
-  #about h2,
-  #about h4,
-  #about p {
-    color: #333; }
+  background: #e6efff;
+  color: #333; }
+  #about .bottom-line {
+    background: black; }
   #about .custom-shape-divider-bottom {
     position: absolute;
     bottom: 0;
@@ -215,6 +227,63 @@ a {
       #about .about-container .description-highlights ::marker {
         color: #d5a419;
         font-size: 1.8rem; }
+
+#skills {
+  background: #3a3f52;
+  color: #fff; }
+  #skills .bottom-line {
+    background: #e6efff; }
+  #skills .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); }
+  #skills .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px; }
+  #skills .custom-shape-divider-bottom .shape-fill {
+    fill: #0f1525; }
+  #skills .skills-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  #skills .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto; }
+    #skills .skills-container .left-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem; }
+      #skills .skills-container .left-column :not(:last-child) {
+        margin-bottom: 1rem; }
+    #skills .skills-container .center-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      margin-top: 4rem; }
+      #skills .skills-container .center-column :not(:last-child) {
+        margin-bottom: 1rem; }
+    #skills .skills-container .right-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      margin-top: 8rem; }
+      #skills .skills-container .right-column :not(:last-child) {
+        margin-bottom: 1rem; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {

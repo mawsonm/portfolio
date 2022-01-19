@@ -68,10 +68,10 @@
 
 #about {
   background: $bg-light;
-  h2,
-  h4,
-  p {
-    color: #333;
+  color: set-text-color($bg-light);
+
+  .bottom-line {
+    background: set-bottom-line-color($bg-light);
   }
   .custom-shape-divider-bottom {
     @include shape-divider;
@@ -127,6 +127,59 @@
         ::marker {
           color: $accent-color;
           font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+#skills {
+  background: $bg-medium;
+  color: set-text-color($bg-medium);
+
+  .bottom-line {
+    background: set-bottom-line-color($bg-medium);
+  }
+
+  .custom-shape-divider-bottom {
+    @include shape-divider;
+  }
+
+  .custom-shape-divider-bottom svg {
+    @include shape-divider-svg;
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    fill: $bg-dark;
+  }
+  .skills {
+    &-header {
+      @include flex-column;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: auto;
+      .left-column {
+        @include skill-column;
+        :not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+      .center-column {
+        @include skill-column;
+        margin-top: 4rem;
+        :not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+      .right-column {
+        @include skill-column;
+        margin-top: 8rem;
+        :not(:last-child) {
+          margin-bottom: 1rem;
         }
       }
     }

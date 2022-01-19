@@ -16,6 +16,22 @@ $secondary-color: #e6efff;
 
 // Mixins
 
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@function set-bottom-line-color($color) {
+  @if (lightness($color) > 50) {
+    @return black;
+  } @else {
+    @return $bg-light;
+  }
+}
+
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
@@ -44,6 +60,14 @@ $secondary-color: #e6efff;
   display: block;
   width: calc(100% + 1.3px);
   height: 117px;
+}
+
+@mixin skill-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .header-text {
