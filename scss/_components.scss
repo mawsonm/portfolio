@@ -19,7 +19,7 @@
 }
 
 .btn-accent:before {
-  transition: 0.7s all ease;
+  transition: 0.4s all ease;
   position: absolute;
   top: 0;
   left: 50%;
@@ -32,7 +32,7 @@
 }
 
 .btn-accent:hover:before {
-  transition: 0.7s all ease;
+  transition: 0.4s all ease;
   left: 0;
   right: 0;
   opacity: 1;
