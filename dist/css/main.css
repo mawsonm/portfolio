@@ -6,6 +6,9 @@
   font-size: 1.5rem;
   font-weight: 300; }
 
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -27,16 +30,19 @@ ul {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 3px transparent solid;
-  padding-bottom: 0.5rem;
-  transition: border-color 0.5s;
+  border-bottom: 2px transparent solid;
+  padding-bottom: 0.25rem;
+  transition: opacity 0.5s;
   color: #fff; }
   a:hover {
-    border-color: #d5a419; }
+    opacity: 0.5; }
 
 .social .fab {
   color: #fff;
   padding: 0 1rem; }
+
+.underline {
+  border-bottom: 2px #d5a419 solid; }
 
 .text-center {
   text-align: center; }
@@ -81,13 +87,40 @@ a {
   margin-bottom: 6rem; }
 
 .btn-accent {
-  background: #d5a419;
+  background: transparent;
   border-radius: 10px;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-family: "Balsamiq Sans", cursive;
   cursor: pointer;
-  border: none; }
+  color: #d5a419;
+  border: 1px solid #d5a419;
+  transition: ease-out 0.3s;
+  position: relative;
+  z-index: 1; }
+
+.btn-accent:hover {
+  color: black; }
+
+.btn-accent:before {
+  transition: 0.7s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #d5a419;
+  border-radius: 8px; }
+
+.btn-accent:hover:before {
+  transition: 0.7s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 8px; }
 
 .bottom-line {
   display: block;
@@ -125,13 +158,18 @@ a {
   overflow: hidden; }
 
 #header {
-  background: #0f1525; }
+  background: #0f1525;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
 
 #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 #home {
   background: #0f1525; }
@@ -247,7 +285,7 @@ a {
     width: calc(100% + 1.3px);
     height: 117px; }
   #skills .custom-shape-divider-bottom .shape-fill {
-    fill: #0f1525; }
+    fill: #e6efff; }
   #skills .skills-header {
     display: flex;
     flex-direction: column;
@@ -284,6 +322,27 @@ a {
       margin-top: 8rem; }
       #skills .skills-container .right-column :not(:last-child) {
         margin-bottom: 1rem; }
+
+#work {
+  background: #e6efff;
+  color: #333; }
+  #work .bottom-line {
+    background: black; }
+  #work .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); }
+  #work .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px; }
+  #work .custom-shape-divider-bottom .shape-fill {
+    fill: #0f1525; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {

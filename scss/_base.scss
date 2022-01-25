@@ -80,6 +80,10 @@ $secondary-color: #e6efff;
   font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Reset
 * {
   margin: 0;
@@ -107,13 +111,13 @@ ul {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 3px transparent solid;
-  padding-bottom: 0.5rem;
-  transition: border-color 0.5s;
+  border-bottom: 2px transparent solid;
+  padding-bottom: 0.25rem;
+  transition: opacity 0.5s;
   color: #fff;
 
   &:hover {
-    border-color: $accent-color;
+    opacity: 0.5;
   }
 }
 
@@ -122,6 +126,9 @@ a {
     color: #fff;
     padding: 0 1rem;
   }
+}
+.underline {
+  border-bottom: 2px $accent-color solid;
 }
 
 // Utilities

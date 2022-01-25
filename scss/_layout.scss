@@ -7,11 +7,16 @@
 }
 #header {
   background: $bg-dark;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 #nav {
   @include flex-between;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #home {
@@ -150,7 +155,7 @@
   }
 
   .custom-shape-divider-bottom .shape-fill {
-    fill: $bg-dark;
+    fill: $bg-light;
   }
   .skills {
     &-header {
@@ -182,6 +187,32 @@
           margin-bottom: 1rem;
         }
       }
+    }
+  }
+}
+
+#work {
+  background: $bg-light;
+  color: set-text-color($bg-light);
+
+  .bottom-line {
+    background: set-bottom-line-color($bg-light);
+  }
+
+  .custom-shape-divider-bottom {
+    @include shape-divider;
+  }
+
+  .custom-shape-divider-bottom svg {
+    @include shape-divider-svg;
+  }
+
+  .custom-shape-divider-bottom .shape-fill {
+    fill: $bg-dark;
+  }
+
+  .work {
+    &-header {
     }
   }
 }
