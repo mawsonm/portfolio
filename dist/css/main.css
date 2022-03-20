@@ -83,7 +83,7 @@ a {
 .my-4 {
   margin: 4rem 0rem; }
 
-#home .home-container, #about .about-container {
+#home .home-container, #about .about-container, #work .work-container {
   margin-bottom: 6rem; }
 
 .btn-accent {
@@ -150,6 +150,102 @@ a {
   width: 250px; }
   .skill-card p {
     font-size: 1.3rem; }
+
+.personal-project-card {
+  background: #3a3f52;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  height: 600px;
+  width: 600px;
+  padding: 2rem; }
+  .personal-project-card h3 {
+    font-size: 1.2rem;
+    color: #ffff;
+    font-family: "Balsamiq Sans", cursive; }
+  .personal-project-card img {
+    border-radius: 25px;
+    width: 536px;
+    height: 238px; }
+  .personal-project-card .skill-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row; }
+    .personal-project-card .skill-row .badge {
+      padding: 0 0.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.521);
+      border-radius: 4px;
+      margin-right: 1rem; }
+      .personal-project-card .skill-row .badge span {
+        color: #fff;
+        font-size: 0.8rem; }
+  .personal-project-card .button-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row; }
+    .personal-project-card .button-row .btn-work {
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      font-family: "Balsamiq Sans", cursive;
+      cursor: pointer;
+      border: 1px solid #e6efff;
+      transition: ease-out 0.3s;
+      z-index: 1; }
+      .personal-project-card .button-row .btn-work:disabled, .personal-project-card .button-row .btn-work[disabled] {
+        opacity: 0.2; }
+    .personal-project-card .button-row a:hover {
+      opacity: 1; }
+    .personal-project-card .button-row .transparent-btn {
+      background: transparent;
+      color: #e6efff; }
+    .personal-project-card .button-row .transparent-btn > a {
+      color: #e6efff; }
+    .personal-project-card .button-row .transparent-btn:hover {
+      background: #e6efff; }
+    .personal-project-card .button-row .transparent-btn:hover > a {
+      color: #3a3f52; }
+    .personal-project-card .button-row .transparent-btn:before {
+      transition: 0.4s all ease;
+      opacity: 0;
+      content: "";
+      background-color: #e6efff;
+      border-radius: 8px; }
+    .personal-project-card .button-row .transparent-btn:hover:before {
+      transition: 0.4s all ease;
+      opacity: 1;
+      z-index: -1;
+      border-radius: 8px; }
+    .personal-project-card .button-row a {
+      font-family: "Balsamiq Sans", cursive;
+      text-transform: none; }
+    .personal-project-card .button-row .invert-btn {
+      background: #e6efff;
+      color: #3a3f52; }
+    .personal-project-card .button-row .invert-btn > a {
+      color: #3a3f52; }
+    .personal-project-card .button-row .invert-btn:hover,
+    .personal-project-card .button-row .invert-btn > a:hover {
+      color: #e6efff; }
+    .personal-project-card .button-row .invert-btn:hover {
+      background: transparent; }
+    .personal-project-card .button-row .invert-btn:before {
+      transition: 0.4s all ease;
+      opacity: 1;
+      content: "";
+      background-color: transparent;
+      border-radius: 8px; }
+    .personal-project-card .button-row .invert-btn-btn:hover:before {
+      transition: 0.4s all ease;
+      opacity: 0;
+      z-index: -1;
+      border-radius: 8px; }
+  .personal-project-card p {
+    font-size: 1rem;
+    color: #fff; }
 
 .container {
   max-width: 1280px;
@@ -351,6 +447,16 @@ a {
     height: 117px; }
   #work .custom-shape-divider-bottom .shape-fill {
     fill: #0f1525; }
+  #work .work-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  #work .work-container .personal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {

@@ -222,6 +222,15 @@
 
   .work {
     &-header {
+      @include flex-column;
+    }
+    &-container {
+      @extend %container-shared;
+
+      .personal-row {
+        @include flex-between;
+        flex-direction: row;
+      }
     }
   }
 }

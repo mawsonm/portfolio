@@ -1,5 +1,4 @@
 // Reusable Components
-
 .btn-accent {
   background: transparent;
   border-radius: 10px; //30px
@@ -71,5 +70,140 @@
   width: 250px;
   p {
     font-size: 1.3rem;
+  }
+}
+
+.personal-project-card {
+  background: $bg-medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  height: 600px;
+  width: 600px;
+  padding: 2rem;
+  h3 {
+    font-size: 1.2rem;
+    color: #ffff;
+    font-family: $accent-font;
+  }
+
+  img {
+    //ratio: 2.2544
+    border-radius: 25px;
+    width: 536px;
+    height: 238px;
+  }
+  .skill-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    .badge {
+      padding: 0 0.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.521);
+      border-radius: 4px;
+      margin-right: 1rem;
+      span {
+        color: set-text-color($bg-medium);
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .button-row {
+    @include flex-around;
+    flex-direction: row;
+
+    .btn-work {
+      border-radius: 10px; //30px
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      font-family: $accent-font;
+      cursor: pointer;
+      border: 1px solid $bg-light;
+      transition: ease-out 0.3s;
+      z-index: 1;
+      &:disabled,
+      &[disabled] {
+        opacity: 0.2;
+      }
+    }
+    a:hover {
+      opacity: 1;
+    }
+    .transparent-btn {
+      background: transparent;
+      color: $bg-light;
+    }
+
+    .transparent-btn > a {
+      color: $bg-light;
+    }
+
+    .transparent-btn:hover {
+      background: $bg-light;
+    }
+
+    .transparent-btn:hover > a {
+      color: $bg-medium;
+    }
+
+    .transparent-btn:before {
+      transition: 0.4s all ease;
+      opacity: 0;
+      content: "";
+      background-color: $bg-light;
+      border-radius: 8px;
+    }
+
+    .transparent-btn:hover:before {
+      transition: 0.4s all ease;
+      opacity: 1;
+      z-index: -1;
+      border-radius: 8px;
+    }
+
+    a {
+      font-family: $accent-font;
+      text-transform: none;
+    }
+    .invert-btn {
+      background: $bg-light;
+      color: $bg-medium;
+    }
+
+    .invert-btn > a {
+      color: $bg-medium;
+    }
+
+    .invert-btn:hover,
+    .invert-btn > a:hover {
+      color: $bg-light;
+    }
+
+    .invert-btn:hover {
+      background: transparent;
+    }
+
+    .invert-btn:before {
+      transition: 0.4s all ease;
+      opacity: 1;
+      content: "";
+      background-color: transparent;
+      border-radius: 8px;
+    }
+
+    .invert-btn-btn:hover:before {
+      transition: 0.4s all ease;
+      opacity: 0;
+      z-index: -1;
+      border-radius: 8px;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: set-text-color($bg-medium);
   }
 }

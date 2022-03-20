@@ -38,6 +38,12 @@ $secondary-color: #e6efff;
   align-items: center;
 }
 
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
