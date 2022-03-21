@@ -229,6 +229,7 @@
 
       .personal-row {
         @include flex-between;
+        flex-wrap: wrap;
         flex-direction: row;
       }
     }

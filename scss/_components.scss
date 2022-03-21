@@ -207,3 +207,60 @@
     color: set-text-color($bg-medium);
   }
 }
+
+.academic-project-card {
+  background: $bg-medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  height: 425px;
+  width: 375px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.2rem;
+    color: #ffff;
+    font-family: $accent-font;
+  }
+
+  img {
+    //ratio: 2.2544
+    border-radius: 25px;
+    width: 536px;
+    height: 238px;
+  }
+  .skill-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .badge {
+      padding: 0 0.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.521);
+      border-radius: 4px;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      span {
+        color: set-text-color($bg-medium);
+        font-size: 0.8rem;
+      }
+    }
+  }
+  p {
+    font-size: 1rem;
+    color: set-text-color($bg-medium);
+  }
+
+  .fa-3x {
+    color: #ffff;
+    margin: 0 auto;
+  }
+}
+
+h3.sub-header-text.text-center {
+  font-weight: 400;
+  font-size: 2rem;
+}

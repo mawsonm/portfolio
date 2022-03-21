@@ -247,6 +247,50 @@ a {
     font-size: 1rem;
     color: #fff; }
 
+.academic-project-card {
+  background: #3a3f52;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  height: 425px;
+  width: 375px;
+  padding: 2rem;
+  margin-bottom: 2rem; }
+  .academic-project-card h3 {
+    font-size: 1.2rem;
+    color: #ffff;
+    font-family: "Balsamiq Sans", cursive; }
+  .academic-project-card img {
+    border-radius: 25px;
+    width: 536px;
+    height: 238px; }
+  .academic-project-card .skill-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .academic-project-card .skill-row .badge {
+      padding: 0 0.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.521);
+      border-radius: 4px;
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
+      .academic-project-card .skill-row .badge span {
+        color: #fff;
+        font-size: 0.8rem; }
+  .academic-project-card p {
+    font-size: 1rem;
+    color: #fff; }
+  .academic-project-card .fa-3x {
+    color: #ffff;
+    margin: 0 auto; }
+
+h3.sub-header-text.text-center {
+  font-weight: 400;
+  font-size: 2rem; }
+
 .container {
   max-width: 1280px;
   padding: 0 1.5rem;
@@ -456,6 +500,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     flex-direction: row; }
 
 @media (max-width: 767px) {
