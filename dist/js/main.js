@@ -53,3 +53,46 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, options);
 
 sections.forEach((section) => observer.observe(section));
+
+const form = document.getElementById('form');
+const nameC = document.getElementById('name');
+const name = document.querySelector('.name');
+const emailC = document.getElementById('email');
+const email = document.querySelector('.email');
+const messageC = document.getElementById('message');
+const message = document.querySelector('.message');
+form.addEventListener('submit', (event) => {
+  let messages = [];
+  if(validateEmpty(name) || validateEmail(email) || validateEmpty(message)){
+    event.preventDefault();
+    if(validateEmpty(name)){
+      let nameError = document.createElement("p");
+      name.classList.add("error-border");
+      nameError.innerText = "Name is required";
+      nameError.classList.add("error-message");
+      nameC.appendChild(nameError);
+    }
+    if(!validateEmail(email)){
+      let emailError = document.createElement("p");
+      email.classList.add('error-border');
+      emailError.innerText = "Email is not the correct format";
+      emailError.classList.add("error-message");
+      emailC.appendChild(emailError);
+    }
+    if(validateEmpty(message)){
+      let messageError = document.createElement("p");
+      message.classList.add('error-border');
+      messageError.innerText = "Message is required";
+      messageError.classList.add("error-message");
+      messageC.appendChild(messageError);
+    }
+  }
+})
+
+const validateEmpty = (text) => {
+  return (text.value === '' || text.value == null) ? true : false;
+}
+
+const validateEmail = (email) => {
+  return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+}

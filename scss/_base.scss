@@ -143,6 +143,12 @@ a {
   text-align: center;
 }
 
+.center-items {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+
 .py {
   &-1 {
     padding: 1rem 0rem;

@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #nav {
@@ -231,6 +231,83 @@
         @include flex-between;
         flex-wrap: wrap;
         flex-direction: row;
+      }
+    }
+  }
+}
+
+#contact {
+  background: $bg-dark;
+  color: set-text-color($bg-dark);
+  .bottom-line {
+    background: set-bottom-line-color($bg-dark);
+  }
+  .contact {
+    &-header {
+      @include flex-column;
+    }
+    &-container {
+      @extend %container-shared;
+
+      .form-container {
+        width: 750px;
+        margin: auto;
+        display: grid;
+        grid-template-areas:
+          "name email"
+          "phone subject"
+          "message message";
+        grid-gap: 2rem;
+
+        .input-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .input-container > * {
+          margin-top: 1rem;
+        }
+
+        .error-message {
+          margin-top: 1rem;
+          color: $accent-color;
+        }
+
+        .text-input {
+          width: 100%;
+          font-family: $accent-font;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          background: $bg-light;
+          border: 1px solid #dddd;
+          transition: background 0.25s, border-color 0.25s, color 0.25s;
+        }
+        .text-input:focus {
+          background: #ffff;
+        }
+
+        .text-input::placeholder {
+          color: rgba(104, 104, 104, 0.733);
+        }
+        .error-border {
+          border: 3px solid $accent-color;
+        }
+
+        .name {
+          grid-area: name;
+        }
+        .subject {
+          grid-area: subject;
+        }
+        .email {
+          grid-area: email;
+        }
+        .phone {
+          grid-area: phone;
+        }
+        #message {
+          grid-area: message;
+        }
       }
     }
   }

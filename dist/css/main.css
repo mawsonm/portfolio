@@ -47,6 +47,11 @@ a {
 .text-center {
   text-align: center; }
 
+.center-items {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem; }
+
 .py-1 {
   padding: 1rem 0rem; }
 
@@ -83,7 +88,7 @@ a {
 .my-4 {
   margin: 4rem 0rem; }
 
-#home .home-container, #about .about-container, #work .work-container {
+#home .home-container, #about .about-container, #work .work-container, #contact .contact-container {
   margin-bottom: 6rem; }
 
 .btn-accent {
@@ -302,7 +307,7 @@ h3.sub-header-text.text-center {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1; }
+  z-index: 2; }
 
 #nav {
   display: flex;
@@ -502,6 +507,56 @@ h3.sub-header-text.text-center {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row; }
+
+#contact {
+  background: #0f1525;
+  color: #fff; }
+  #contact .bottom-line {
+    background: #e6efff; }
+  #contact .contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  #contact .contact-container .form-container {
+    width: 750px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "name email" "phone subject" "message message";
+    grid-gap: 2rem; }
+    #contact .contact-container .form-container .input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    #contact .contact-container .form-container .input-container > * {
+      margin-top: 1rem; }
+    #contact .contact-container .form-container .error-message {
+      margin-top: 1rem;
+      color: #d5a419; }
+    #contact .contact-container .form-container .text-input {
+      width: 100%;
+      font-family: "Balsamiq Sans", cursive;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: #e6efff;
+      border: 1px solid #dddd;
+      transition: background 0.25s, border-color 0.25s, color 0.25s; }
+    #contact .contact-container .form-container .text-input:focus {
+      background: #ffff; }
+    #contact .contact-container .form-container .text-input::placeholder {
+      color: rgba(104, 104, 104, 0.733); }
+    #contact .contact-container .form-container .error-border {
+      border: 3px solid #d5a419; }
+    #contact .contact-container .form-container .name {
+      grid-area: name; }
+    #contact .contact-container .form-container .subject {
+      grid-area: subject; }
+    #contact .contact-container .form-container .email {
+      grid-area: email; }
+    #contact .contact-container .form-container .phone {
+      grid-area: phone; }
+    #contact .contact-container .form-container #message {
+      grid-area: message; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {
