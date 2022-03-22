@@ -311,19 +311,34 @@
         <div class="contact-container py-1">
           <form id="form" name="contact" method="POST" data-netlify="true">
             <div class="form-container">
-              <div id="name" class="input-container">
-                <input class="text-input name" type="text" placeholder="Name">
+              <div class="input-container">
+                <input class="text-input" type="text" placeholder="Name" id="name">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small></small>
               </div>
-              <div id="email" class="input-container">
-                <input class="text-input email" type="email" placeholder="Email Address">
+              <div class="input-container">
+                <input class="text-input" type="text" placeholder="Email Address" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small></small>
               </div>
-              <input class="text-input phone" type="phone" placeholder="Phone Number">
-              <input class="text-input subject" type="text" placeholder="Subject">
-              <div id="message" class="input-container">
-                <textarea class="text-input message" name="" id="" rows="15" placeholder="Message"></textarea>
+              <div class="input-container">
+                <input class="text-input phone" type="phone" placeholder="Phone Number">
               </div>
-            </div>
-            <div class="center-items">
+              <div class="input-container">
+                <input class="text-input subject" type="text" placeholder="Subject">
+              </div>
+              <div class="message">
+                <div class="input-container">
+                  <textarea class="text-input" name="" rows="10" placeholder="Message" id="message"></textarea>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small></small>
+                </div>
+              </div>
+              </div>
+              <div class="center-items">
               <button type="submit" class="btn-accent">Submit</button>
             </div>
           </form>

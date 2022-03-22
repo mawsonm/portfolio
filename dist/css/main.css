@@ -523,40 +523,63 @@ h3.sub-header-text.text-center {
     margin: auto;
     display: grid;
     grid-template-areas: "name email" "phone subject" "message message";
-    grid-gap: 2rem; }
+    grid-gap: 1.5rem; }
     #contact .contact-container .form-container .input-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-    #contact .contact-container .form-container .input-container > * {
-      margin-top: 1rem; }
-    #contact .contact-container .form-container .error-message {
-      margin-top: 1rem;
-      color: #d5a419; }
-    #contact .contact-container .form-container .text-input {
-      width: 100%;
-      font-family: "Balsamiq Sans", cursive;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      background: #e6efff;
-      border: 1px solid #dddd;
-      transition: background 0.25s, border-color 0.25s, color 0.25s; }
-    #contact .contact-container .form-container .text-input:focus {
-      background: #ffff; }
-    #contact .contact-container .form-container .text-input::placeholder {
-      color: rgba(104, 104, 104, 0.733); }
-    #contact .contact-container .form-container .error-border {
-      border: 3px solid #d5a419; }
-    #contact .contact-container .form-container .name {
-      grid-area: name; }
-    #contact .contact-container .form-container .subject {
-      grid-area: subject; }
-    #contact .contact-container .form-container .email {
-      grid-area: email; }
-    #contact .contact-container .form-container .phone {
-      grid-area: phone; }
-    #contact .contact-container .form-container #message {
-      grid-area: message; }
+      padding-bottom: 1.5rem;
+      position: relative; }
+      #contact .contact-container .form-container .input-container.success input,
+      #contact .contact-container .form-container .input-container.success textarea {
+        border-color: #2ecc71; }
+      #contact .contact-container .form-container .input-container.success i.fa-check-circle {
+        visibility: visible;
+        color: #2ecc71; }
+      #contact .contact-container .form-container .input-container.error i.fa-exclamation-circle {
+        visibility: visible;
+        color: #e74c3c; }
+      #contact .contact-container .form-container .input-container.error small {
+        visibility: visible;
+        color: #e74c3c; }
+      #contact .contact-container .form-container .input-container.error input,
+      #contact .contact-container .form-container .input-container.error textarea {
+        border-color: #e74c3c; }
+    #contact .contact-container .form-container i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      visibility: hidden; }
+    #contact .contact-container .form-container small {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      padding-left: 0.5rem; }
+  #contact .contact-container .error-message {
+    margin-top: 1rem;
+    color: #d5a419; }
+  #contact .contact-container .text-input {
+    width: 100%;
+    font-family: "Balsamiq Sans", cursive;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: #e6efff;
+    border: 3px solid #dddd;
+    transition: background 0.25s, border-color 0.25s, color 0.25s; }
+  #contact .contact-container .text-input:focus {
+    background: #ffff; }
+  #contact .contact-container .text-input::placeholder {
+    color: rgba(104, 104, 104, 0.733); }
+  #contact .contact-container .error-border {
+    border: 3px solid #d5a419; }
+  #contact .contact-container #name {
+    grid-area: name; }
+  #contact .contact-container #subject {
+    grid-area: subject; }
+  #contact .contact-container #email {
+    grid-area: email; }
+  #contact .contact-container #phone {
+    grid-area: phone; }
+  #contact .contact-container .message {
+    grid-area: message; }
 
 @media (max-width: 767px) {
   .custom-shape-divider-bottom svg {

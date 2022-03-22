@@ -257,57 +257,86 @@
           "name email"
           "phone subject"
           "message message";
-        grid-gap: 2rem;
+        grid-gap: 1.5rem;
 
         .input-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          padding-bottom: 1.5rem;
+          position: relative;
+          &.success input,
+          &.success textarea {
+            border-color: #2ecc71;
+          }
+          &.success i.fa-check-circle {
+            visibility: visible;
+            color: #2ecc71;
+          }
+          &.error i.fa-exclamation-circle {
+            visibility: visible;
+            color: #e74c3c;
+          }
+          &.error small {
+            visibility: visible;
+            color: #e74c3c;
+          }
+          &.error input,
+          &.error textarea {
+            border-color: #e74c3c;
+          }
         }
-        .input-container > * {
-          margin-top: 1rem;
+        i {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          visibility: hidden;
         }
+        small {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          visibility: hidden;
+          padding-left: 0.5rem;
+        }
+      }
 
-        .error-message {
-          margin-top: 1rem;
-          color: $accent-color;
-        }
+      .error-message {
+        margin-top: 1rem;
+        color: $accent-color;
+      }
 
-        .text-input {
-          width: 100%;
-          font-family: $accent-font;
-          padding: 0.5rem 1rem;
-          border-radius: 4px;
-          background: $bg-light;
-          border: 1px solid #dddd;
-          transition: background 0.25s, border-color 0.25s, color 0.25s;
-        }
-        .text-input:focus {
-          background: #ffff;
-        }
+      .text-input {
+        width: 100%;
+        font-family: $accent-font;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        background: $bg-light;
+        border: 3px solid #dddd;
+        transition: background 0.25s, border-color 0.25s, color 0.25s;
+      }
+      .text-input:focus {
+        background: #ffff;
+      }
 
-        .text-input::placeholder {
-          color: rgba(104, 104, 104, 0.733);
-        }
-        .error-border {
-          border: 3px solid $accent-color;
-        }
+      .text-input::placeholder {
+        color: rgba(104, 104, 104, 0.733);
+      }
+      .error-border {
+        border: 3px solid $accent-color;
+      }
 
-        .name {
-          grid-area: name;
-        }
-        .subject {
-          grid-area: subject;
-        }
-        .email {
-          grid-area: email;
-        }
-        .phone {
-          grid-area: phone;
-        }
-        #message {
-          grid-area: message;
-        }
+      #name {
+        grid-area: name;
+      }
+      #subject {
+        grid-area: subject;
+      }
+      #email {
+        grid-area: email;
+      }
+      #phone {
+        grid-area: phone;
+      }
+      .message {
+        grid-area: message;
       }
     }
   }

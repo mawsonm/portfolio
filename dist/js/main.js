@@ -55,44 +55,55 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach((section) => observer.observe(section));
 
 const form = document.getElementById('form');
-const nameC = document.getElementById('name');
-const name = document.querySelector('.name');
-const emailC = document.getElementById('email');
-const email = document.querySelector('.email');
-const messageC = document.getElementById('message');
-const message = document.querySelector('.message');
-form.addEventListener('submit', (event) => {
-  let messages = [];
-  if(validateEmpty(name) || validateEmail(email) || validateEmpty(message)){
-    event.preventDefault();
-    if(validateEmpty(name)){
-      let nameError = document.createElement("p");
-      name.classList.add("error-border");
-      nameError.innerText = "Name is required";
-      nameError.classList.add("error-message");
-      nameC.appendChild(nameError);
-    }
-    if(!validateEmail(email)){
-      let emailError = document.createElement("p");
-      email.classList.add('error-border');
-      emailError.innerText = "Email is not the correct format";
-      emailError.classList.add("error-message");
-      emailC.appendChild(emailError);
-    }
-    if(validateEmpty(message)){
-      let messageError = document.createElement("p");
-      message.classList.add('error-border');
-      messageError.innerText = "Message is required";
-      messageError.classList.add("error-message");
-      messageC.appendChild(messageError);
-    }
-  }
-})
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
 
-const validateEmpty = (text) => {
-  return (text.value === '' || text.value == null) ? true : false;
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkForm();
+});
+
+function checkForm(){
+  const nameValue = name.value.trim();
+  const emailValue = email.value.trim();
+  const messageValue = message.value.trim();
+
+  if(nameValue === ''){
+    displayError(name, "Name cannot be blank");
+  }
+  else {
+    displaySuccess(name);
+  }
+  if(emailValue === ''){
+    displayError(email, "Email cannot be blank");
+  }
+  else if(!isValidEmail(emailValue)){
+    displayError(email, "Email is not valid");
+  }
+  else {
+    displaySuccess(email);
+  }
+  if(messageValue === ''){
+    displayError(message, "Message cannot be blank");
+  }
+  else {
+    displaySuccess(message);
+  }
 }
 
-const validateEmail = (email) => {
-  return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+function displayError(input, message){
+  const inputContainer = input.parentElement;
+  const small = inputContainer.querySelector('small');
+  small.innerText = message;
+  inputContainer.className = 'input-container error';
+}
+
+function displaySuccess(input){
+  const inputContainer = input.parentElement;
+  inputContainer.className = 'input-container success';
+}
+
+function isValidEmail(email){
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
