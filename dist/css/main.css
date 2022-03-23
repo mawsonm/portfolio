@@ -585,3 +585,65 @@ h3.sub-header-text.text-center {
   .custom-shape-divider-bottom svg {
     width: calc(100% + 1.3px);
     height: 27px; } }
+
+@media (max-width: 912px) {
+  #home .home-container {
+    margin-top: 3rem; }
+  #skills .skills-container {
+    margin-bottom: 4rem; }
+  #work #personal .personal-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column; }
+  #work #personal .personal-project-card {
+    height: 525px;
+    width: 525px;
+    margin-bottom: 2rem; }
+    #work #personal .personal-project-card img {
+      width: 461px;
+      height: 181px; }
+  #work #academic .personal-row {
+    flex-wrap: wrap;
+    flex-direction: row; }
+  #work #academic .academic-project-card {
+    height: 340px;
+    width: 340px;
+    padding: 1.5rem; }
+    #work #academic .academic-project-card .badge {
+      padding: 0.3rem 0.2rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem; }
+      #work #academic .academic-project-card .badge p {
+        font-size: 0.8rem; }
+  #work #academic p {
+    font-size: 0.9rem; }
+  #work #academic .fa-3x {
+    font-size: 2rem; }
+  .skill-card {
+    height: 200px;
+    width: 200px; }
+  #contact .contact-container .form-container {
+    max-width: 540px; } }
+
+@media (max-width: 540px) {
+  #skills .skills-container .center-column {
+    margin-top: 2rem; }
+  #skills .skills-container .right-column {
+    margin-top: 4rem; }
+  #work #academic .academic-project-card {
+    height: 340px;
+    width: 240px;
+    padding: 1rem; }
+    #work #academic .academic-project-card h3 {
+      font-size: 1rem; }
+    #work #academic .academic-project-card .badge p {
+      font-size: 0.6rem; }
+  #work #academic p {
+    font-size: 0.8rem; }
+  .skill-card {
+    height: 150px;
+    width: 150px; }
+    .skill-card p {
+      font-size: 1rem; }
+  #contact .contact-container .form-container {
+    max-width: 450px; } }
