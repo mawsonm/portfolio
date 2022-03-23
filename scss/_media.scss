@@ -1,3 +1,17 @@
+@media (max-width: 1024px) {
+  #work {
+    #personal {
+      .personal-row {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        .personal-project-card {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
 //Tablets
 @media (max-width: 912px) {
   #home {
@@ -17,15 +31,9 @@
   }
   #work {
     #personal {
-      .personal-row {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-      }
       .personal-project-card {
         height: 525px;
         width: 525px;
-        margin-bottom: 2rem;
         img {
           //ratio: 2.2544
           width: 461px;
@@ -293,7 +301,7 @@
         }
         .button-row {
           .btn-work {
-            padding: 0.2rem;
+            padding: 0.2rem 0.5rem;
             font-size: 0.9rem;
           }
         }

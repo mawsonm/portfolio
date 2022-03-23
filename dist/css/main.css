@@ -614,6 +614,14 @@ h3.sub-header-text.text-center {
     width: calc(100% + 1.3px);
     height: 27px; } }
 
+@media (max-width: 1024px) {
+  #work #personal .personal-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column; }
+    #work #personal .personal-row .personal-project-card {
+      margin-bottom: 2rem; } }
+
 @media (max-width: 912px) {
   #home .home-container {
     margin-top: 3rem; }
@@ -621,14 +629,9 @@ h3.sub-header-text.text-center {
       grid-template-rows: 0.5fr repeat(3, 0.7fr) 0.5fr; }
   #skills .skills-container {
     margin-bottom: 4rem; }
-  #work #personal .personal-row {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column; }
   #work #personal .personal-project-card {
     height: 525px;
-    width: 525px;
-    margin-bottom: 2rem; }
+    width: 525px; }
     #work #personal .personal-project-card img {
       width: 461px;
       height: 181px; }
@@ -783,7 +786,7 @@ h3.sub-header-text.text-center {
         #work #personal .personal-project-card .skill-row .badge span {
           font-size: 0.7rem; }
     #work #personal .personal-project-card .button-row .btn-work {
-      padding: 0.2rem;
+      padding: 0.2rem 0.5rem;
       font-size: 0.9rem; }
     #work #personal .personal-project-card p {
       font-size: 0.8rem; }
