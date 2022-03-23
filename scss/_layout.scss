@@ -17,6 +17,24 @@
   @include flex-between;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  .toggle-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 44%;
+    left: 46%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.7rem;
+    height: 1.2rem;
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
 }
 
 #home {
@@ -37,6 +55,44 @@
     &-container {
       @include flex-between;
       @extend %container-shared;
+
+      .hero-grid {
+        display: grid;
+        grid-template-rows: 1fr repeat(3, 0.7fr) 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        .primary {
+          grid-row: 2 / 3;
+          grid-column: 1 / 2;
+          color: $primary-color;
+          font-size: 4rem;
+          font-family: $accent-font;
+          font-weight: 500;
+        }
+        .profile {
+          @include flex-column;
+          width: 100%;
+          grid-row: 3 / 5;
+          grid-column: 1 / 2;
+          .secondary {
+            color: $secondary-color;
+            font-size: 2rem;
+            font-weight: 400;
+          }
+          .small {
+            color: $secondary-color;
+          }
+          .btn-accent {
+            width: 140px;
+            height: 42px;
+          }
+        }
+        .pic {
+          grid-row: 1 / 6;
+          grid-column: 2 / 3;
+          width: 100%;
+          margin: auto;
+        }
+      }
 
       .profile {
         @include flex-column;

@@ -107,3 +107,10 @@ function displaySuccess(input){
 function isValidEmail(email){
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const links = document.getElementById('links');
+
+toggleButton.addEventListener('click', () => {
+  links.classList.toggle('active');
+})

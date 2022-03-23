@@ -24,7 +24,12 @@
       <div class="container">
         <nav id="nav">
           <img src="img/logo.png" alt="" />
-          <ul>
+          <label class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <ul id="links">
             <li><a class="home-nav" href="#home">Home</a></li>
             <li><a class="about-nav" href="#about">About</a></li>
             <li><a class="skills-nav" href="#skills">Skills</a></li>
@@ -50,7 +55,28 @@
     </div>
       <div class="container">
         <div class="home-container">
-          <div class="profile text-center">
+          <div class="hero-grid text-center">
+            <h1 class="primary">Hi, I'm Matt</h1>
+            <div class="profile text-center">
+              <h2 class="secondary">Web developer</h2>
+            <p class="small my-1">
+              High level experience creating websites from scratch. Eager to learn new technologies and apply them to solve real-world problems.
+            </p>
+            <button class="btn-accent my-1">Resume <i class="fas fa-download"></i></button>
+            </div>
+            <div class="pic">
+              <svg class="mask" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask" mask-type="alpha">
+                <path fill="#D5A419" d="M50.5,-59.3C66.9,-46.5,82.5,-31.9,86,-14.8C89.5,2.4,81,22.1,70.1,40.1C59.3,58.2,46.2,74.5,29.2,81C12.2,87.6,-8.7,84.3,-28.4,77.4C-48.1,70.5,-66.6,59.8,-74.5,44.1C-82.4,28.3,-79.7,7.4,-74.5,-11.6C-69.3,-30.6,-61.8,-47.6,-48.9,-61C-36.1,-74.4,-18.1,-84.2,-0.5,-83.7C17.1,-83.1,34.2,-72.1,50.5,-59.3Z" transform="translate(100 100)" />
+              </mask>
+                <g mask="url(#mask)">
+                  <path fill="#D5A419" d="M50.5,-59.3C66.9,-46.5,82.5,-31.9,86,-14.8C89.5,2.4,81,22.1,70.1,40.1C59.3,58.2,46.2,74.5,29.2,81C12.2,87.6,-8.7,84.3,-28.4,77.4C-48.1,70.5,-66.6,59.8,-74.5,44.1C-82.4,28.3,-79.7,7.4,-74.5,-11.6C-69.3,-30.6,-61.8,-47.6,-48.9,-61C-36.1,-74.4,-18.1,-84.2,-0.5,-83.7C17.1,-83.1,34.2,-72.1,50.5,-59.3Z" transform="translate(100 100)" />
+                  <image class="profile_pic" x='30' y='35' xlink:href="img/profile_pic.png">
+                </g>
+              </svg>
+            </div>
+          </div>
+          <!-- <div class="profile text-center">
             <h1 class="primary">Hi, I'm Matt</h1>
             <h2 class="secondary">Web developer</h2>
             <p class="small my-1">
@@ -68,7 +94,7 @@
                 <image class="profile_pic" x='30' y='35' xlink:href="img/profile_pic.png">
               </g>
             </svg>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

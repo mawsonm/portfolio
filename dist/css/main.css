@@ -315,6 +315,21 @@ h3.sub-header-text.text-center {
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+  #nav .toggle-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 44%;
+    left: 46%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.7rem;
+    height: 1.2rem; }
+    #nav .toggle-button .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px; }
 
 #home {
   background: #0f1525; }
@@ -337,6 +352,39 @@ h3.sub-header-text.text-center {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    #home .home-container .hero-grid {
+      display: grid;
+      grid-template-rows: 1fr repeat(3, 0.7fr) 1fr;
+      grid-template-columns: repeat(2, 1fr); }
+      #home .home-container .hero-grid .primary {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        color: #fff;
+        font-size: 4rem;
+        font-family: "Balsamiq Sans", cursive;
+        font-weight: 500; }
+      #home .home-container .hero-grid .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        grid-row: 3 / 5;
+        grid-column: 1 / 2; }
+        #home .home-container .hero-grid .profile .secondary {
+          color: #e6efff;
+          font-size: 2rem;
+          font-weight: 400; }
+        #home .home-container .hero-grid .profile .small {
+          color: #e6efff; }
+        #home .home-container .hero-grid .profile .btn-accent {
+          width: 140px;
+          height: 42px; }
+      #home .home-container .hero-grid .pic {
+        grid-row: 1 / 6;
+        grid-column: 2 / 3;
+        width: 100%;
+        margin: auto; }
     #home .home-container .profile {
       display: flex;
       flex-direction: column;
@@ -589,6 +637,8 @@ h3.sub-header-text.text-center {
 @media (max-width: 912px) {
   #home .home-container {
     margin-top: 3rem; }
+    #home .home-container .hero-grid {
+      grid-template-rows: 0.5fr repeat(3, 0.7fr) 0.5fr; }
   #skills .skills-container {
     margin-bottom: 4rem; }
   #work #personal .personal-row {
@@ -626,6 +676,30 @@ h3.sub-header-text.text-center {
     max-width: 540px; } }
 
 @media (max-width: 540px) {
+  #nav {
+    align-items: flex-start; }
+    #nav .toggle-button {
+      display: flex; }
+    #nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 3rem; }
+      #nav ul li {
+        padding: 0.5rem; }
+    #nav ul.active {
+      display: flex; }
+  #home .home-container .hero-grid {
+    grid-template-rows: repeat(2, 0.7fr); }
+    #home .home-container .hero-grid .primary {
+      margin: auto;
+      grid-row: 1 / 2;
+      font-size: 3.5rem; }
+    #home .home-container .hero-grid .profile {
+      grid-row: 2 / 3;
+      grid-column: 1 / 3; }
+    #home .home-container .hero-grid .pic {
+      grid-row: 1 / 2; }
   #skills .skills-container .center-column {
     margin-top: 2rem; }
   #skills .skills-container .right-column {
@@ -654,6 +728,37 @@ h3.sub-header-text.text-center {
     max-width: 450px; } }
 
 @media (max-width: 420px) {
+  #nav {
+    align-items: flex-start; }
+    #nav .toggle-button {
+      display: flex;
+      top: 1.1rem; }
+    #nav img {
+      width: 83px;
+      height: 21px; }
+    #nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 3rem; }
+      #nav ul li {
+        padding: 0.5rem;
+        margin-left: 1.5rem; }
+    #nav ul.active {
+      display: flex; }
+    #nav .fa-2x {
+      font-size: 1.5rem; }
+  #home .home-container .hero-grid {
+    grid-template-rows: repeat(2, 0.7fr); }
+    #home .home-container .hero-grid .primary {
+      margin: auto;
+      grid-row: 1 / 2;
+      font-size: 3rem; }
+    #home .home-container .hero-grid .profile {
+      grid-row: 2 / 3;
+      grid-column: 1 / 3; }
+    #home .home-container .hero-grid .pic {
+      grid-row: 1 / 2; }
   #skills .skills-container .left-column {
     padding: 0.2rem; }
     #skills .skills-container .left-column :not(:last-child) {
