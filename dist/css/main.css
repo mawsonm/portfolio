@@ -640,6 +640,11 @@ h3.sub-header-text.text-center {
       font-size: 0.6rem; }
   #work #academic p {
     font-size: 0.8rem; }
+  #work #academic .personal-row {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
   .skill-card {
     height: 150px;
     width: 150px; }
@@ -647,3 +652,55 @@ h3.sub-header-text.text-center {
       font-size: 1rem; }
   #contact .contact-container .form-container {
     max-width: 450px; } }
+
+@media (max-width: 420px) {
+  #skills .skills-container .left-column {
+    padding: 0.2rem; }
+    #skills .skills-container .left-column :not(:last-child) {
+      margin-bottom: 0.2rem; }
+  #skills .skills-container .center-column {
+    padding: 0.2rem;
+    margin-top: 1rem; }
+    #skills .skills-container .center-column :not(:last-child) {
+      margin-bottom: 0.2rem; }
+  #skills .skills-container .right-column {
+    padding: 0.2rem;
+    margin-top: 2rem; }
+    #skills .skills-container .right-column :not(:last-child) {
+      margin-bottom: 0.2rem; }
+  #work #personal .personal-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column; }
+  #work #personal .personal-project-card {
+    height: 500px;
+    width: 350px;
+    margin-bottom: 2rem; }
+    #work #personal .personal-project-card img {
+      width: 286px;
+      height: 127px; }
+    #work #personal .personal-project-card .skill-row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      #work #personal .personal-project-card .skill-row .badge {
+        padding: 0 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem; }
+        #work #personal .personal-project-card .skill-row .badge span {
+          font-size: 0.7rem; }
+    #work #personal .personal-project-card .button-row .btn-work {
+      padding: 0.2rem;
+      font-size: 0.9rem; }
+    #work #personal .personal-project-card p {
+      font-size: 0.8rem; }
+  .skill-card {
+    height: 100px;
+    width: 100px;
+    padding: 1rem; }
+    .skill-card p {
+      font-size: 0.8rem; }
+  #contact .contact-container .form-container {
+    max-width: 330px; } }
