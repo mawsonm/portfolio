@@ -171,6 +171,25 @@
 }
 
 @media (max-width: 420px) {
+  #about {
+    .about-container {
+      .description-highlights {
+        p {
+          font-size: 0.9rem;
+        }
+        .highlights {
+          .sub-header-text {
+            font-size: 1.1rem;
+          }
+          ul {
+            li {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
   #nav {
     align-items: flex-start;
     .toggle-button {
