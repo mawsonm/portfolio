@@ -320,35 +320,36 @@
           <h3 class="sub-header-text text-center">Want to Hire Me or Collaborate? </h3>
         </div>
         <div class="contact-container py-1">
-          <form id="form" name="contact" method="POST" data-netlify="true">
+          <form id="form" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
             <div class="form-container">
               <div class="input-container">
-                <input class="text-input" type="text" placeholder="Name" id="name">
+                <input class="text-input" type="text" name="name" placeholder="Name*" id="name">
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small></small>
               </div>
               <div class="input-container">
-                <input class="text-input" type="text" placeholder="Email Address" id="email">
+                <input class="text-input" type="text" name="email" placeholder="Email Address*" id="email">
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small></small>
               </div>
               <div class="input-container">
-                <input class="text-input phone" type="phone" placeholder="Phone Number">
+                <input class="text-input phone" type="phone" name="phone" placeholder="Phone Number">
               </div>
               <div class="input-container">
-                <input class="text-input subject" type="text" placeholder="Subject">
+                <input class="text-input subject" type="text" name="subject" placeholder="Subject">
               </div>
               <div class="message">
                 <div class="input-container">
-                  <textarea class="text-input" name="" rows="10" placeholder="Message" id="message"></textarea>
+                  <textarea class="text-input" name="" rows="10" name="message" placeholder="Message*" id="message"></textarea>
                   <i class="fas fa-check-circle"></i>
                   <i class="fas fa-exclamation-circle"></i>
                   <small></small>
                 </div>
               </div>
               </div>
+              <div class="my-2" data-netlify-recaptcha="true"></div>
               <div class="center-items">
               <button type="submit" class="btn-accent">Submit</button>
             </div>
