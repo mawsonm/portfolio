@@ -60,36 +60,46 @@ const email = document.getElementById('email');
 const message = document.getElementById('message');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  checkForm();
+  const valid = checkForm();
+  if(!valid){
+    e.preventDefault();
+  }
 });
 
 function checkForm(){
   const nameValue = name.value.trim();
   const emailValue = email.value.trim();
   const messageValue = message.value.trim();
+  const validated = true;
 
   if(nameValue === ''){
     displayError(name, "Name cannot be blank");
+    validated = false;
   }
   else {
     displaySuccess(name);
   }
+  
   if(emailValue === ''){
     displayError(email, "Email cannot be blank");
+    validated = false;
   }
   else if(!isValidEmail(emailValue)){
     displayError(email, "Email is not valid");
+    validated = false;
   }
   else {
     displaySuccess(email);
   }
+
   if(messageValue === ''){
     displayError(message, "Message cannot be blank");
+    validated = false;
   }
   else {
     displaySuccess(message);
   }
+  return validated;
 }
 
 function displayError(input, message){
