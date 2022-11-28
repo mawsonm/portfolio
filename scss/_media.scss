@@ -153,7 +153,7 @@
         font-size: 0.8rem;
       }
     }
-    #academic {
+    #academic, #challenges {
       .personal-row {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -269,13 +269,13 @@
     }
   }
   #work {
-    #personal {
+    #personal, #challenges {
       .personal-row {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
       }
-      .personal-project-card {
+      .personal-project-card, .academic-project-card {
         height: 500px;
         width: 350px;
         margin-bottom: 2rem;
@@ -284,6 +284,7 @@
           width: 286px;
           height: 127px;
         }
+        
         .skill-row {
           display: flex;
           justify-content: flex-start;

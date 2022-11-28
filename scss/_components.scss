@@ -111,7 +111,19 @@
     }
   }
 
-  .button-row {
+  p {
+    font-size: 1rem;
+    color: set-text-color($bg-medium);
+  }
+}
+
+#challenges {
+  .academic-project-card {
+    height: 600px;
+  }
+}
+
+.button-row {
     @include flex-around;
     flex-direction: row;
 
@@ -202,12 +214,6 @@
     }
   }
 
-  p {
-    font-size: 1rem;
-    color: set-text-color($bg-medium);
-  }
-}
-
 .academic-project-card {
   background: $bg-medium;
   display: flex;
@@ -230,6 +236,11 @@
     border-radius: 25px;
     width: 536px;
     height: 238px;
+  }
+  .challenge {
+    border-radius: 25px;
+    width: 300px;
+    height: 220px;
   }
   .skill-row {
     display: flex;
